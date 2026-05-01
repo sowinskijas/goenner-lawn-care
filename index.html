@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Goenner Lawn Care | Professional Lawn & Landscaping Services</title>
-<meta name="description" content="Goenner Lawn Care — professional lawn mowing, fertilization, landscaping, and seasonal cleanup services. Quality you can see, service you can trust.">
+<title>Goenner Lawn Care LLC | Mount Pleasant, MI | Lawn, Landscape & Tree Specialists</title>
+<meta name="description" content="Goenner Lawn Care LLC — your lawn, landscape & tree specialists serving Mount Pleasant, Central Michigan & Oakland County. Call (989) 289-2026 for a free estimate.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -42,9 +42,7 @@
     display: flex; align-items: center; justify-content: space-between;
     padding: 18px 40px;
   }
-  .logo {
-    display: flex; align-items: center; gap: 12px;
-  }
+  .logo { display: flex; align-items: center; gap: 12px; }
   .logo-icon {
     width: 44px; height: 44px; background: var(--green);
     border-radius: 10px; display: flex; align-items: center; justify-content: center;
@@ -52,16 +50,11 @@
   }
   .logo-text strong {
     display: block; font-family: 'Playfair Display', serif;
-    font-size: 1.15rem; color: var(--green-dark); font-weight: 700;
+    font-size: 1.1rem; color: var(--green-dark); font-weight: 700;
   }
-  .logo-text span {
-    font-size: 0.75rem; color: var(--text-light); letter-spacing: 0.08em; text-transform: uppercase;
-  }
-  nav { display: flex; align-items: center; gap: 36px; }
-  nav a {
-    font-size: 0.88rem; font-weight: 500; color: var(--text-mid);
-    transition: color 0.2s;
-  }
+  .logo-text span { font-size: 0.75rem; color: var(--text-light); letter-spacing: 0.06em; text-transform: uppercase; }
+  nav { display: flex; align-items: center; gap: 32px; }
+  nav a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color 0.2s; }
   nav a:hover { color: var(--green); }
   .nav-cta {
     background: var(--green); color: var(--white) !important;
@@ -97,16 +90,9 @@
     font-weight: 500; letter-spacing: 0.05em; margin-bottom: 24px;
     border: 1px solid rgba(255,255,255,0.2);
   }
-  .hero h1 {
-    font-size: clamp(2.4rem, 5vw, 3.8rem);
-    color: var(--white); margin-bottom: 20px;
-    font-weight: 700;
-  }
+  .hero h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); color: var(--white); margin-bottom: 20px; font-weight: 700; }
   .hero h1 em { font-style: normal; color: #a8d5a8; }
-  .hero p {
-    font-size: 1.1rem; color: rgba(255,255,255,0.8);
-    margin-bottom: 40px; max-width: 480px;
-  }
+  .hero p { font-size: 1.05rem; color: rgba(255,255,255,0.8); margin-bottom: 40px; max-width: 480px; }
   .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
   .btn-primary {
     background: var(--white); color: var(--green-dark);
@@ -122,17 +108,12 @@
     transition: border-color 0.2s, background 0.2s;
   }
   .btn-secondary:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
-  .hero-stats {
-    display: flex; gap: 40px; margin-top: 56px;
-  }
-  .stat-item { }
+  .hero-stats { display: flex; gap: 40px; margin-top: 56px; }
   .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; color: #a8d5a8; font-weight: 700; }
   .stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 2px; }
   .hero-card {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 20px; padding: 40px;
-    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px; padding: 40px; backdrop-filter: blur(10px);
   }
   .hero-card h3 { color: var(--white); font-size: 1.4rem; margin-bottom: 24px; }
   .service-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
@@ -147,7 +128,7 @@
     font-size: 0.75rem; font-weight: 700; flex-shrink: 0;
   }
   .hero-cta-card {
-    background: var(--white); border-radius: 14px; padding: 24px;
+    background: var(--white); border-radius: 14px; padding: 20px 24px;
     margin-top: 24px; display: flex; align-items: center; gap: 16px;
   }
   .hero-cta-card .phone-icon {
@@ -155,9 +136,24 @@
     display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;
   }
   .hero-cta-card p { font-size: 0.75rem; color: var(--text-light); margin-bottom: 2px; }
-  .hero-cta-card a { font-weight: 700; color: var(--green-dark); font-size: 1.1rem; }
+  .hero-cta-card a { font-weight: 700; color: var(--green-dark); font-size: 1.15rem; }
 
-  /* ── SECTION SHARED ── */
+  /* ── DIVISIONS BANNER ── */
+  .divisions {
+    background: var(--green-dark); padding: 28px 40px;
+  }
+  .divisions-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap;
+  }
+  .division-item {
+    display: flex; align-items: center; gap: 10px;
+    color: rgba(255,255,255,0.85); font-size: 0.88rem; font-weight: 500;
+  }
+  .division-item span:first-child { font-size: 1.2rem; }
+  .division-divider { width: 1px; height: 28px; background: rgba(255,255,255,0.2); }
+
+  /* ── SECTIONS SHARED ── */
   section { padding: 96px 40px; }
   .section-inner { max-width: 1200px; margin: 0 auto; }
   .section-label {
@@ -165,7 +161,7 @@
     text-transform: uppercase; color: var(--green); margin-bottom: 12px;
   }
   .section-title { font-size: clamp(1.9rem, 3.5vw, 2.8rem); margin-bottom: 16px; color: var(--text-dark); }
-  .section-sub { font-size: 1.05rem; color: var(--text-mid); max-width: 560px; }
+  .section-sub { font-size: 1.05rem; color: var(--text-mid); max-width: 580px; }
   .text-center { text-align: center; }
   .text-center .section-sub { margin: 0 auto; }
 
@@ -187,33 +183,30 @@
   .service-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
   .service-card p { font-size: 0.9rem; color: var(--text-mid); }
 
-  /* ── WHY US ── */
-  .why-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-top: 0;
+  /* ── ABOUT ── */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .about-features { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+  .about-feature { display: flex; gap: 18px; }
+  .about-feature-icon {
+    width: 46px; height: 46px; border-radius: 12px; background: var(--green-pale);
+    display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;
   }
-  .why-features { display: flex; flex-direction: column; gap: 32px; margin-top: 40px; }
-  .why-feature { display: flex; gap: 20px; }
-  .why-feature-icon {
-    width: 48px; height: 48px; border-radius: 12px; background: var(--green-pale);
-    display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0;
-  }
-  .why-feature h4 { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1rem; margin-bottom: 4px; }
-  .why-feature p { font-size: 0.88rem; color: var(--text-mid); }
-  .why-visual {
+  .about-feature h4 { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.98rem; margin-bottom: 3px; }
+  .about-feature p { font-size: 0.875rem; color: var(--text-mid); }
+  .about-visual {
     background: linear-gradient(135deg, var(--green-pale) 0%, #d4ead4 100%);
-    border-radius: 20px; padding: 48px; display: flex; flex-direction: column; gap: 20px;
+    border-radius: 20px; padding: 44px; display: flex; flex-direction: column; gap: 20px;
   }
   .testimonial-card {
-    background: var(--white); border-radius: 14px; padding: 28px;
-    box-shadow: var(--shadow);
+    background: var(--white); border-radius: 14px; padding: 28px; box-shadow: var(--shadow);
   }
   .stars { color: #f5a623; font-size: 1rem; margin-bottom: 10px; }
-  .testimonial-card p { font-size: 0.9rem; color: var(--text-mid); font-style: italic; margin-bottom: 16px; }
+  .testimonial-card p { font-size: 0.88rem; color: var(--text-mid); font-style: italic; margin-bottom: 16px; }
   .testimonial-author { display: flex; align-items: center; gap: 12px; }
   .author-avatar {
     width: 38px; height: 38px; background: var(--green); border-radius: 50%;
     display: flex; align-items: center; justify-content: center; color: var(--white);
-    font-weight: 700; font-size: 0.9rem;
+    font-weight: 700; font-size: 0.85rem;
   }
   .author-name { font-weight: 600; font-size: 0.88rem; }
   .author-loc { font-size: 0.78rem; color: var(--text-light); }
@@ -227,12 +220,8 @@
 
   /* ── PROCESS ── */
   .process { background: var(--cream); }
-  .steps-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 60px;
-  }
-  .step {
-    text-align: center;
-  }
+  .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 60px; }
+  .step { text-align: center; }
   .step-num {
     width: 56px; height: 56px; border-radius: 50%;
     background: var(--green); color: var(--white);
@@ -242,25 +231,36 @@
   .step h4 { font-family: 'Inter', sans-serif; font-weight: 600; margin-bottom: 8px; }
   .step p { font-size: 0.88rem; color: var(--text-mid); }
 
-  /* ── TESTIMONIALS ── */
-  .testimonials-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px;
-  }
+  /* ── REVIEWS ── */
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px; }
   .review-card {
     background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
     padding: 32px; transition: box-shadow 0.25s;
   }
   .review-card:hover { box-shadow: var(--shadow); }
   .review-card .stars { margin-bottom: 16px; }
-  .review-card p { font-size: 0.9rem; color: var(--text-mid); font-style: italic; margin-bottom: 20px; }
+  .review-card p { font-size: 0.88rem; color: var(--text-mid); font-style: italic; margin-bottom: 20px; }
+  .review-date { font-size: 0.75rem; color: var(--text-light); margin-top: 6px; }
+
+  /* ── SERVICE AREA ── */
+  .area { background: var(--green-dark); }
+  .area .section-label { color: #a8d5a8; }
+  .area .section-title { color: var(--white); }
+  .area .section-sub { color: rgba(255,255,255,0.7); }
+  .area-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 48px; }
+  .area-region h4 {
+    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9rem;
+    color: #a8d5a8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px;
+  }
+  .area-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+  .area-tag {
+    background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.85);
+    padding: 6px 14px; border-radius: 100px; font-size: 0.85rem;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
 
   /* ── CONTACT ── */
-  .contact { background: var(--green-dark); }
-  .contact-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
-  }
-  .contact h2 { color: var(--white); }
-  .contact .section-label { color: #a8d5a8; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
   .contact-info { margin-top: 36px; display: flex; flex-direction: column; gap: 24px; }
   .contact-item { display: flex; align-items: flex-start; gap: 16px; }
   .contact-icon {
@@ -268,10 +268,9 @@
     display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;
   }
   .contact-item strong { display: block; color: var(--white); font-size: 0.85rem; margin-bottom: 2px; }
-  .contact-item span { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
-  .contact-form {
-    background: var(--white); border-radius: 20px; padding: 40px;
-  }
+  .contact-item span, .contact-item a { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+  .contact-item a:hover { color: var(--white); }
+  .contact-form { background: var(--white); border-radius: 20px; padding: 40px; }
   .contact-form h3 { font-size: 1.4rem; margin-bottom: 28px; }
   .form-group { margin-bottom: 18px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
@@ -279,24 +278,19 @@
   input, textarea, select {
     width: 100%; padding: 12px 16px; border: 1.5px solid var(--border);
     border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.9rem;
-    color: var(--text-dark); background: var(--white); transition: border-color 0.2s;
-    outline: none;
+    color: var(--text-dark); background: var(--white); transition: border-color 0.2s; outline: none;
   }
   input:focus, textarea:focus, select:focus { border-color: var(--green); }
   textarea { resize: vertical; min-height: 110px; }
   .form-submit {
     width: 100%; background: var(--green); color: var(--white);
     padding: 14px; border: none; border-radius: 10px; font-family: 'Inter', sans-serif;
-    font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: background 0.2s;
-    margin-top: 8px;
+    font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: background 0.2s; margin-top: 8px;
   }
   .form-submit:hover { background: var(--green-dark); }
 
   /* ── FOOTER ── */
-  footer {
-    background: #111; color: rgba(255,255,255,0.6);
-    padding: 48px 40px; font-size: 0.85rem;
-  }
+  footer { background: #111; color: rgba(255,255,255,0.6); padding: 48px 40px; font-size: 0.85rem; }
   .footer-inner {
     max-width: 1200px; margin: 0 auto;
     display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
@@ -316,12 +310,15 @@
     .hero { padding: 100px 24px 60px; }
     .hero-inner { grid-template-columns: 1fr; gap: 40px; }
     .hero-card { display: none; }
-    .hero-stats { gap: 28px; }
+    .hero-stats { gap: 24px; }
+    .divisions-inner { gap: 24px; }
+    .division-divider { display: none; }
     .services-grid { grid-template-columns: 1fr; }
-    .why-grid { grid-template-columns: 1fr; }
-    .why-visual { display: none; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-visual { display: none; }
     .steps-grid { grid-template-columns: repeat(2, 1fr); }
     .testimonials-grid { grid-template-columns: 1fr; }
+    .area-grid { grid-template-columns: 1fr; gap: 32px; }
     .contact-grid { grid-template-columns: 1fr; gap: 40px; }
     .form-row { grid-template-columns: 1fr; }
     .footer-inner { flex-direction: column; align-items: flex-start; }
@@ -336,15 +333,16 @@
     <a href="#" class="logo">
       <div class="logo-icon">🌿</div>
       <div class="logo-text">
-        <strong>Goenner Lawn Care</strong>
-        <span>Professional Lawn &amp; Landscaping</span>
+        <strong>Goenner Lawn Care LLC</strong>
+        <span>Mount Pleasant, MI</span>
       </div>
     </a>
     <nav>
       <a href="#services">Services</a>
       <a href="#about">About</a>
       <a href="#reviews">Reviews</a>
-      <a href="#contact" class="nav-cta">Get a Free Quote</a>
+      <a href="#area">Service Area</a>
+      <a href="#contact" class="nav-cta">Free Estimate</a>
     </nav>
     <div class="hamburger">
       <span></span><span></span><span></span>
@@ -356,140 +354,152 @@
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-badge">⭐ Trusted Local Lawn Care Professionals</div>
-      <h1>A <em>Beautiful Lawn</em> Starts Here</h1>
-      <p>From routine mowing to full-scale landscaping, Goenner Lawn Care delivers results that make your property stand out — season after season.</p>
+      <div class="hero-badge">⭐ Serving Central Michigan Since 2014</div>
+      <h1>Your Lawn, Landscape <em>&amp; Tree</em> Specialists</h1>
+      <p>We don't just "cut grass" — we manicure lawns. Together we'll create a lawn you can be proud of, from a company you can depend on.</p>
       <div class="hero-btns">
-        <a href="#contact" class="btn-primary">Get a Free Quote</a>
+        <a href="tel:9892892026" class="btn-primary">📞 (989) 289-2026</a>
         <a href="#services" class="btn-secondary">View Services</a>
       </div>
       <div class="hero-stats">
         <div class="stat-item">
-          <div class="stat-num">500+</div>
-          <div class="stat-label">Happy Customers</div>
+          <div class="stat-num">2014</div>
+          <div class="stat-label">Established</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">15+</div>
-          <div class="stat-label">Years Experience</div>
+          <div class="stat-num">3</div>
+          <div class="stat-label">Divisions</div>
         </div>
         <div class="stat-item">
           <div class="stat-num">100%</div>
-          <div class="stat-label">Satisfaction Guaranteed</div>
+          <div class="stat-label">Free Estimates</div>
         </div>
       </div>
     </div>
     <div class="hero-card">
       <h3>What We Offer</h3>
       <ul class="service-list">
-        <li>Lawn Mowing &amp; Edging</li>
-        <li>Fertilization &amp; Weed Control</li>
-        <li>Aeration &amp; Overseeding</li>
-        <li>Landscaping &amp; Mulching</li>
-        <li>Spring &amp; Fall Cleanup</li>
-        <li>Snow Removal</li>
+        <li>Lawn Care &amp; Maintenance</li>
+        <li>Landscape Design &amp; Hardscape</li>
+        <li>Tree Service &amp; Removal</li>
+        <li>Property Maintenance</li>
+        <li>Snow Plowing</li>
+        <li>Emergency Tree Removal</li>
       </ul>
       <div class="hero-cta-card">
         <div class="phone-icon">📞</div>
         <div>
-          <p>Call us anytime</p>
-          <a href="tel:+15555550100">(555) 555-0100</a>
+          <p>Call for a free estimate</p>
+          <a href="tel:9892892026">(989) 289-2026</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- DIVISIONS BANNER -->
+<div class="divisions">
+  <div class="divisions-inner">
+    <div class="division-item"><span>🌱</span> Goenner Lawn Care LLC</div>
+    <div class="division-divider"></div>
+    <div class="division-item"><span>🌳</span> Goenner Landscaping LLC</div>
+    <div class="division-divider"></div>
+    <div class="division-item"><span>🪓</span> Goenner Tree Removal LLC</div>
+  </div>
+</div>
 
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="section-inner">
     <div class="text-center">
       <span class="section-label">Our Services</span>
-      <h2 class="section-title">Everything Your Lawn Needs</h2>
-      <p class="section-sub">We offer a full range of lawn and landscaping services for residential and commercial properties.</p>
+      <h2 class="section-title">Everything Your Property Needs</h2>
+      <p class="section-sub">From weekly lawn maintenance to full landscape design, tree removal, and winter snow plowing — we do it all.</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon">🌱</div>
-        <h3>Lawn Mowing &amp; Edging</h3>
-        <p>Consistent, precise cuts that keep your grass healthy and your property looking sharp all season long.</p>
+        <h3>Lawn Care &amp; Maintenance</h3>
+        <p>Regular mowing, edging, and trimming to keep your lawn looking manicured and healthy all season long. We treat your lawn like our own.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">💧</div>
-        <h3>Fertilization &amp; Weed Control</h3>
-        <p>Custom fertilization programs and targeted weed control to promote thick, green, weed-free turf.</p>
+        <div class="service-icon">🌿</div>
+        <h3>Landscape Design</h3>
+        <p>Creative, innovative landscaping tailored to your vision. If you can dream it, we can build it — functional, beautiful, and lasting.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🌾</div>
-        <h3>Aeration &amp; Overseeding</h3>
-        <p>Core aeration and overseeding to reduce compaction, improve drainage, and fill in thin or bare spots.</p>
+        <div class="service-icon">🪨</div>
+        <h3>Hardscape</h3>
+        <p>Patios, walkways, retaining walls, and more. We bring together form and function to elevate your outdoor living space.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🌳</div>
-        <h3>Landscaping &amp; Mulching</h3>
-        <p>Bed design, mulch installation, edging, and planting to enhance curb appeal and define your outdoor spaces.</p>
+        <div class="service-icon">🌲</div>
+        <h3>Tree Service &amp; Removal</h3>
+        <p>Safe, professional tree trimming, cutting, and removal. Emergency tree removal service is available when you need it most.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🍂</div>
-        <h3>Spring &amp; Fall Cleanup</h3>
-        <p>Thorough seasonal cleanups including leaf removal, debris clearing, and prep work to set your lawn up for success.</p>
+        <div class="service-icon">🏡</div>
+        <h3>Property Maintenance</h3>
+        <p>Complete property upkeep including cleanup, mulching, edging, and seasonal services to protect and enhance your investment.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">❄️</div>
-        <h3>Snow Removal</h3>
-        <p>Reliable snow plowing and salting services to keep your driveways, walks, and parking areas safe all winter.</p>
+        <h3>Snow Plowing</h3>
+        <p>Reliable winter snow plowing to keep your driveways and walkways clear and safe. Reasonable pricing, dependable service.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY US -->
+<!-- ABOUT -->
 <section id="about">
   <div class="section-inner">
-    <div class="why-grid">
+    <div class="about-grid">
       <div>
-        <span class="section-label">Why Choose Us</span>
-        <h2 class="section-title">Lawn Care Done Right, Every Time</h2>
-        <p style="color:var(--text-mid);margin-bottom:8px;">We're not a franchise — we're your neighbors. Goenner Lawn Care has been caring for local lawns for over 15 years, and we treat every property like our own.</p>
-        <div class="why-features">
-          <div class="why-feature">
-            <div class="why-feature-icon">📅</div>
-            <div>
-              <h4>Reliable &amp; On Schedule</h4>
-              <p>We show up when we say we will, every time — no excuses, no surprises.</p>
-            </div>
-          </div>
-          <div class="why-feature">
-            <div class="why-feature-icon">🏡</div>
+        <span class="section-label">About Us</span>
+        <h2 class="section-title">The Grass Is Always Greener on Our Side</h2>
+        <p style="color:var(--text-mid);margin-bottom:8px;">At Goenner Lawn Care, we strive to set the standard. We lead by example and truly listen to our customers' wants and needs as we share the common interest of having beautifully manicured lawns.</p>
+        <p style="color:var(--text-mid);margin-top:12px;">Established in 2014, our team is up for every job, managing projects with the skill and experience our clients have come to expect. We always stand behind our work, with customer satisfaction being our number one priority.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon">🏡</div>
             <div>
               <h4>Locally Owned &amp; Operated</h4>
-              <p>We're part of this community. Your satisfaction directly reflects our reputation.</p>
+              <p>We're your neighbors in Central Michigan. We treat your property the same way we'd treat our own.</p>
             </div>
           </div>
-          <div class="why-feature">
-            <div class="why-feature-icon">🔒</div>
+          <div class="about-feature">
+            <div class="about-feature-icon">💰</div>
             <div>
-              <h4>Fully Insured</h4>
-              <p>Complete liability coverage so you have total peace of mind on every visit.</p>
+              <h4>Free Estimates</h4>
+              <p>We provide honest, up-front quotes with no hidden fees — saving you time and money from the start.</p>
             </div>
           </div>
-          <div class="why-feature">
-            <div class="why-feature-icon">💬</div>
+          <div class="about-feature">
+            <div class="about-feature-icon">🔒</div>
             <div>
-              <h4>Clear Communication</h4>
-              <p>Easy scheduling, upfront pricing, and a team that actually picks up the phone.</p>
+              <h4>Licensed &amp; Insured</h4>
+              <p>Fully licensed and insured for your complete peace of mind on every visit.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">⭐</div>
+            <div>
+              <h4>Quality Workmanship</h4>
+              <p>We have the professional tools and experience to handle all your lawn care and landscaping needs.</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="why-visual">
+      <div class="about-visual">
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          <p>"Goenner has been taking care of our lawn for three years. It has never looked better. They're prompt, professional, and actually care about quality."</p>
+          <p>"Luke and his team have been mowing my 2 acre yard for two years now, and do a great job every time! I added snow removal service through him this winter, and couldn't be happier!"</p>
           <div class="testimonial-author">
-            <div class="author-avatar">MR</div>
+            <div class="author-avatar">MH</div>
             <div>
-              <div class="author-name">Mike R.</div>
-              <div class="author-loc">Local Homeowner</div>
+              <div class="author-name">Mike H.</div>
+              <div class="author-loc">Verified Customer</div>
             </div>
           </div>
         </div>
@@ -497,7 +507,7 @@
           <span>🛡️</span>
           <div>
             <strong>Satisfaction Guaranteed</strong>
-            <p>Not happy? We'll come back and make it right — no questions asked.</p>
+            <p>Honesty, integrity, and superior quality — we stand behind the value we promise and deliver.</p>
           </div>
         </div>
       </div>
@@ -510,29 +520,29 @@
   <div class="section-inner">
     <div class="text-center">
       <span class="section-label">How It Works</span>
-      <h2 class="section-title">Getting Started Is Easy</h2>
-      <p class="section-sub">Four simple steps to a lawn you'll love.</p>
+      <h2 class="section-title">Getting Started Is Simple</h2>
+      <p class="section-sub">Call us or fill out the form and we'll take care of everything from there.</p>
     </div>
     <div class="steps-grid">
       <div class="step">
         <div class="step-num">1</div>
-        <h4>Request a Quote</h4>
-        <p>Fill out our quick form or give us a call. We'll get back to you fast.</p>
+        <h4>Contact Us</h4>
+        <p>Call (989) 289-2026 or submit the contact form to get in touch.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
         <h4>Free Estimate</h4>
-        <p>We visit your property and provide a detailed, no-obligation quote.</p>
+        <p>We assess your property and give you an honest, up-front quote — no hidden fees.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <h4>We Get to Work</h4>
-        <p>Our crew arrives on time, fully equipped, and ready to deliver results.</p>
+        <p>Our experienced crew arrives on schedule and delivers quality results every time.</p>
       </div>
       <div class="step">
         <div class="step-num">4</div>
-        <h4>Enjoy Your Lawn</h4>
-        <p>Kick back and enjoy a beautiful, healthy lawn — we handle the rest.</p>
+        <h4>Enjoy Your Property</h4>
+        <p>Sit back and enjoy a beautiful, well-maintained lawn you can be proud of.</p>
       </div>
     </div>
   </div>
@@ -544,39 +554,39 @@
     <div class="text-center">
       <span class="section-label">Customer Reviews</span>
       <h2 class="section-title">What Our Customers Say</h2>
-      <p class="section-sub">Don't just take our word for it — here's what our neighbors have to say.</p>
+      <p class="section-sub">We let our work — and our customers — speak for themselves.</p>
     </div>
     <div class="testimonials-grid">
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>"Best lawn care company I've used. They transformed our yard from patchy and overgrown to something we're actually proud of. Highly recommend!"</p>
+        <p>"Luke and his team have been mowing my 2 acre yard for two years now, and do a great job every time! I added snow removal service through him this winter, and couldn't be happier! They do a great job with the plowing, for a very reasonable price. I can't recommend Goenner LawnCare enough!"</p>
         <div class="testimonial-author">
-          <div class="author-avatar">JS</div>
+          <div class="author-avatar">MH</div>
           <div>
-            <div class="author-name">Jennifer S.</div>
-            <div class="author-loc">Residential Customer</div>
+            <div class="author-name">Mike H.</div>
+            <div class="review-date">February 12, 2018</div>
           </div>
         </div>
       </div>
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>"Reliable, affordable, and the results speak for themselves. I've tried several other companies over the years — Goenner is the one I'm sticking with."</p>
+        <p>"I highly recommend this company. I can not believe what a great job and how good it looks. A thousand times better than it looked. Thank you!"</p>
         <div class="testimonial-author">
-          <div class="author-avatar">DT</div>
+          <div class="author-avatar">SP</div>
           <div>
-            <div class="author-name">Dave T.</div>
-            <div class="author-loc">Residential Customer</div>
+            <div class="author-name">Sherry P.</div>
+            <div class="review-date">September 12, 2018</div>
           </div>
         </div>
       </div>
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>"We use Goenner for our commercial property. Professional crew, consistent quality, and they communicate well. Exactly what a business needs."</p>
+        <p>"Goenner LawnCare did a fabulous job! I had a large tree down from the big flood, and in about a half a day's time the tree was gone. They also cleaned up and mowed the area where the tree had been. Luke is a really nice guy and very down to earth. I highly recommend this company!"</p>
         <div class="testimonial-author">
-          <div class="author-avatar">KL</div>
+          <div class="author-avatar">SP</div>
           <div>
-            <div class="author-name">Karen L.</div>
-            <div class="author-loc">Commercial Customer</div>
+            <div class="author-name">Stacey P.</div>
+            <div class="review-date">July 19, 2017</div>
           </div>
         </div>
       </div>
@@ -584,40 +594,86 @@
   </div>
 </section>
 
+<!-- SERVICE AREA -->
+<section class="area" id="area">
+  <div class="section-inner">
+    <div class="text-center">
+      <span class="section-label">Service Area</span>
+      <h2 class="section-title">Proudly Serving Michigan</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.7);">We serve the Central Michigan region and the Oakland County region. Not sure if we cover your area? Give us a call!</p>
+    </div>
+    <div class="area-grid">
+      <div class="area-region">
+        <h4>Central Michigan Region</h4>
+        <div class="area-tags">
+          <span class="area-tag">Mt. Pleasant</span>
+          <span class="area-tag">Mecosta</span>
+          <span class="area-tag">Big Rapids</span>
+          <span class="area-tag">Weidman</span>
+          <span class="area-tag">Edmore</span>
+          <span class="area-tag">Remus</span>
+          <span class="area-tag">Shepherd</span>
+          <span class="area-tag">Alma</span>
+          <span class="area-tag">Clare</span>
+          <span class="area-tag">Bay City</span>
+          <span class="area-tag">Midland</span>
+          <span class="area-tag">Saginaw</span>
+          <span class="area-tag">Surrounding Areas</span>
+        </div>
+      </div>
+      <div class="area-region">
+        <h4>Oakland County Region</h4>
+        <div class="area-tags">
+          <span class="area-tag">Birmingham</span>
+          <span class="area-tag">Troy</span>
+          <span class="area-tag">Surrounding Areas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
-<section class="contact" id="contact">
+<section style="background:var(--green-dark);padding:96px 40px;" id="contact">
   <div class="section-inner">
     <div class="contact-grid">
       <div>
-        <span class="section-label">Contact Us</span>
-        <h2 class="section-title" style="color:white;">Ready for a Better Lawn?</h2>
-        <p style="color:rgba(255,255,255,0.7);margin-top:12px;">Get your free, no-obligation quote today. We serve residential and commercial customers throughout the area.</p>
+        <span class="section-label" style="color:#a8d5a8;">Contact Us</span>
+        <h2 class="section-title" style="color:white;">Request a Free Estimate</h2>
+        <p style="color:rgba(255,255,255,0.7);margin-top:12px;">At Goenner Lawn Care LLC, we believe in saving our customers time and money. We'll provide you with an honest, up-front quote with no hidden fees.</p>
         <div class="contact-info">
           <div class="contact-item">
             <div class="contact-icon">📞</div>
             <div>
               <strong>Phone</strong>
-              <span><a href="tel:+15555550100" style="color:rgba(255,255,255,0.7)">(555) 555-0100</a></span>
+              <span><a href="tel:9892892026">(989) 289-2026</a></span>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon">📧</div>
             <div>
               <strong>Email</strong>
-              <span><a href="mailto:info@goennerlawncare.com" style="color:rgba(255,255,255,0.7)">info@goennerlawncare.com</a></span>
+              <span><a href="mailto:goenner.lawncare@gmail.com">goenner.lawncare@gmail.com</a></span>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon">🕐</div>
+            <div class="contact-icon">📍</div>
             <div>
-              <strong>Hours</strong>
-              <span>Mon–Fri: 7am–6pm &nbsp;|&nbsp; Sat: 8am–4pm</span>
+              <strong>Location</strong>
+              <span>Mount Pleasant, MI</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🌲</div>
+            <div>
+              <strong>Emergency Tree Removal</strong>
+              <span>Available — call us anytime</span>
             </div>
           </div>
         </div>
       </div>
       <div class="contact-form">
-        <h3>Get a Free Quote</h3>
+        <h3>Get Your Free Quote</h3>
         <form>
           <div class="form-row">
             <div class="form-group">
@@ -631,7 +687,7 @@
           </div>
           <div class="form-group">
             <label>Phone Number</label>
-            <input type="tel" placeholder="(555) 555-0100">
+            <input type="tel" placeholder="(989) 000-0000">
           </div>
           <div class="form-group">
             <label>Email Address</label>
@@ -641,18 +697,19 @@
             <label>Service Needed</label>
             <select>
               <option value="">Select a service...</option>
-              <option>Lawn Mowing &amp; Edging</option>
-              <option>Fertilization &amp; Weed Control</option>
-              <option>Aeration &amp; Overseeding</option>
-              <option>Landscaping &amp; Mulching</option>
-              <option>Spring / Fall Cleanup</option>
-              <option>Snow Removal</option>
+              <option>Lawn Care &amp; Maintenance</option>
+              <option>Landscape Design</option>
+              <option>Hardscape</option>
+              <option>Tree Service &amp; Removal</option>
+              <option>Property Maintenance</option>
+              <option>Snow Plowing</option>
+              <option>Emergency Tree Removal</option>
               <option>Other / Not Sure</option>
             </select>
           </div>
           <div class="form-group">
-            <label>Message (optional)</label>
-            <textarea placeholder="Tell us about your property or any specific needs..."></textarea>
+            <label>Message</label>
+            <textarea placeholder="Tell us about your property or what you need..."></textarea>
           </div>
           <button type="submit" class="form-submit">Send My Free Quote Request →</button>
         </form>
@@ -665,13 +722,14 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
-      <strong>Goenner Lawn Care</strong>
-      <span>© 2025 All rights reserved.</span>
+      <strong>Goenner Lawn Care LLC</strong>
+      <span>© 2025 · Mount Pleasant, MI · (989) 289-2026</span>
     </div>
     <div class="footer-links">
       <a href="#services">Services</a>
       <a href="#about">About</a>
       <a href="#reviews">Reviews</a>
+      <a href="#area">Service Area</a>
       <a href="#contact">Contact</a>
     </div>
   </div>

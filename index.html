@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goenner Lawn Care | Professional Lawn & Landscaping Services</title>
+<meta name="description" content="Goenner Lawn Care — professional lawn mowing, fertilization, landscaping, and seasonal cleanup services. Quality you can see, service you can trust.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2d6a2d;
+    --green-light: #3d8b3d;
+    --green-dark: #1e4d1e;
+    --green-pale: #eef5ee;
+    --cream: #faf9f6;
+    --white: #ffffff;
+    --text-dark: #1a1a1a;
+    --text-mid: #555;
+    --text-light: #888;
+    --border: #e0e0d8;
+    --shadow: 0 4px 24px rgba(0,0,0,0.08);
+    --radius: 12px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--white); line-height: 1.65; }
+  h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+  img { display: block; max-width: 100%; }
+  a { text-decoration: none; color: inherit; }
+
+  /* ── HEADER ── */
+  .header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.97);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(8px);
+  }
+  .header-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 40px;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .logo-icon {
+    width: 44px; height: 44px; background: var(--green);
+    border-radius: 10px; display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+  }
+  .logo-text strong {
+    display: block; font-family: 'Playfair Display', serif;
+    font-size: 1.15rem; color: var(--green-dark); font-weight: 700;
+  }
+  .logo-text span {
+    font-size: 0.75rem; color: var(--text-light); letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  nav { display: flex; align-items: center; gap: 36px; }
+  nav a {
+    font-size: 0.88rem; font-weight: 500; color: var(--text-mid);
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--green); }
+  .nav-cta {
+    background: var(--green); color: var(--white) !important;
+    padding: 10px 22px; border-radius: 8px; font-weight: 600 !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--green-dark) !important; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 2px; background: var(--text-dark); border-radius: 2px; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e4d1e 0%, #2d6a2d 40%, #3d8b3d 100%);
+    display: flex; align-items: center;
+    padding: 120px 40px 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9);
+    padding: 6px 16px; border-radius: 100px; font-size: 0.8rem;
+    font-weight: 500; letter-spacing: 0.05em; margin-bottom: 24px;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    color: var(--white); margin-bottom: 20px;
+    font-weight: 700;
+  }
+  .hero h1 em { font-style: normal; color: #a8d5a8; }
+  .hero p {
+    font-size: 1.1rem; color: rgba(255,255,255,0.8);
+    margin-bottom: 40px; max-width: 480px;
+  }
+  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--white); color: var(--green-dark);
+    padding: 15px 32px; border-radius: 10px; font-weight: 700;
+    font-size: 0.95rem; transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.25); }
+  .btn-secondary {
+    background: transparent; color: var(--white);
+    padding: 15px 32px; border-radius: 10px; font-weight: 600;
+    font-size: 0.95rem; border: 2px solid rgba(255,255,255,0.4);
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+  .hero-stats {
+    display: flex; gap: 40px; margin-top: 56px;
+  }
+  .stat-item { }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; color: #a8d5a8; font-weight: 700; }
+  .stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 2px; }
+  .hero-card {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px; padding: 40px;
+    backdrop-filter: blur(10px);
+  }
+  .hero-card h3 { color: var(--white); font-size: 1.4rem; margin-bottom: 24px; }
+  .service-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .service-list li {
+    display: flex; align-items: center; gap: 12px;
+    color: rgba(255,255,255,0.85); font-size: 0.95rem;
+  }
+  .service-list li::before {
+    content: '✓'; width: 24px; height: 24px; border-radius: 50%;
+    background: rgba(168,213,168,0.25); color: #a8d5a8;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem; font-weight: 700; flex-shrink: 0;
+  }
+  .hero-cta-card {
+    background: var(--white); border-radius: 14px; padding: 24px;
+    margin-top: 24px; display: flex; align-items: center; gap: 16px;
+  }
+  .hero-cta-card .phone-icon {
+    width: 44px; height: 44px; background: var(--green-pale); border-radius: 10px;
+    display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;
+  }
+  .hero-cta-card p { font-size: 0.75rem; color: var(--text-light); margin-bottom: 2px; }
+  .hero-cta-card a { font-weight: 700; color: var(--green-dark); font-size: 1.1rem; }
+
+  /* ── SECTION SHARED ── */
+  section { padding: 96px 40px; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-label {
+    display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--green); margin-bottom: 12px;
+  }
+  .section-title { font-size: clamp(1.9rem, 3.5vw, 2.8rem); margin-bottom: 16px; color: var(--text-dark); }
+  .section-sub { font-size: 1.05rem; color: var(--text-mid); max-width: 560px; }
+  .text-center { text-align: center; }
+  .text-center .section-sub { margin: 0 auto; }
+
+  /* ── SERVICES ── */
+  .services { background: var(--cream); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 60px;
+  }
+  .service-card {
+    background: var(--white); border-radius: var(--radius); padding: 36px 30px;
+    border: 1px solid var(--border); transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .service-icon {
+    width: 56px; height: 56px; background: var(--green-pale); border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; margin-bottom: 20px;
+  }
+  .service-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+  .service-card p { font-size: 0.9rem; color: var(--text-mid); }
+
+  /* ── WHY US ── */
+  .why-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-top: 0;
+  }
+  .why-features { display: flex; flex-direction: column; gap: 32px; margin-top: 40px; }
+  .why-feature { display: flex; gap: 20px; }
+  .why-feature-icon {
+    width: 48px; height: 48px; border-radius: 12px; background: var(--green-pale);
+    display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0;
+  }
+  .why-feature h4 { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1rem; margin-bottom: 4px; }
+  .why-feature p { font-size: 0.88rem; color: var(--text-mid); }
+  .why-visual {
+    background: linear-gradient(135deg, var(--green-pale) 0%, #d4ead4 100%);
+    border-radius: 20px; padding: 48px; display: flex; flex-direction: column; gap: 20px;
+  }
+  .testimonial-card {
+    background: var(--white); border-radius: 14px; padding: 28px;
+    box-shadow: var(--shadow);
+  }
+  .stars { color: #f5a623; font-size: 1rem; margin-bottom: 10px; }
+  .testimonial-card p { font-size: 0.9rem; color: var(--text-mid); font-style: italic; margin-bottom: 16px; }
+  .testimonial-author { display: flex; align-items: center; gap: 12px; }
+  .author-avatar {
+    width: 38px; height: 38px; background: var(--green); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; color: var(--white);
+    font-weight: 700; font-size: 0.9rem;
+  }
+  .author-name { font-weight: 600; font-size: 0.88rem; }
+  .author-loc { font-size: 0.78rem; color: var(--text-light); }
+  .guarantee-badge {
+    background: var(--green); color: var(--white); border-radius: 14px; padding: 20px 24px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .guarantee-badge span:first-child { font-size: 2rem; }
+  .guarantee-badge strong { display: block; font-size: 0.95rem; }
+  .guarantee-badge p { font-size: 0.8rem; opacity: 0.8; margin-top: 2px; }
+
+  /* ── PROCESS ── */
+  .process { background: var(--cream); }
+  .steps-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 60px;
+  }
+  .step {
+    text-align: center;
+  }
+  .step-num {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: var(--green); color: var(--white);
+    font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;
+  }
+  .step h4 { font-family: 'Inter', sans-serif; font-weight: 600; margin-bottom: 8px; }
+  .step p { font-size: 0.88rem; color: var(--text-mid); }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px;
+  }
+  .review-card {
+    background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 32px; transition: box-shadow 0.25s;
+  }
+  .review-card:hover { box-shadow: var(--shadow); }
+  .review-card .stars { margin-bottom: 16px; }
+  .review-card p { font-size: 0.9rem; color: var(--text-mid); font-style: italic; margin-bottom: 20px; }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--green-dark); }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+  }
+  .contact h2 { color: var(--white); }
+  .contact .section-label { color: #a8d5a8; }
+  .contact-info { margin-top: 36px; display: flex; flex-direction: column; gap: 24px; }
+  .contact-item { display: flex; align-items: flex-start; gap: 16px; }
+  .contact-icon {
+    width: 44px; height: 44px; background: rgba(255,255,255,0.1); border-radius: 10px;
+    display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;
+  }
+  .contact-item strong { display: block; color: var(--white); font-size: 0.85rem; margin-bottom: 2px; }
+  .contact-item span { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+  .contact-form {
+    background: var(--white); border-radius: 20px; padding: 40px;
+  }
+  .contact-form h3 { font-size: 1.4rem; margin-bottom: 28px; }
+  .form-group { margin-bottom: 18px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  label { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 6px; color: var(--text-mid); letter-spacing: 0.04em; }
+  input, textarea, select {
+    width: 100%; padding: 12px 16px; border: 1.5px solid var(--border);
+    border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.9rem;
+    color: var(--text-dark); background: var(--white); transition: border-color 0.2s;
+    outline: none;
+  }
+  input:focus, textarea:focus, select:focus { border-color: var(--green); }
+  textarea { resize: vertical; min-height: 110px; }
+  .form-submit {
+    width: 100%; background: var(--green); color: var(--white);
+    padding: 14px; border: none; border-radius: 10px; font-family: 'Inter', sans-serif;
+    font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: background 0.2s;
+    margin-top: 8px;
+  }
+  .form-submit:hover { background: var(--green-dark); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #111; color: rgba(255,255,255,0.6);
+    padding: 48px 40px; font-size: 0.85rem;
+  }
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+  }
+  .footer-logo strong { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.1rem; }
+  .footer-logo span { display: block; font-size: 0.75rem; margin-top: 2px; }
+  .footer-links { display: flex; gap: 28px; }
+  .footer-links a { color: rgba(255,255,255,0.5); transition: color 0.2s; }
+  .footer-links a:hover { color: var(--white); }
+
+  /* ── MOBILE ── */
+  @media (max-width: 900px) {
+    section { padding: 72px 24px; }
+    .header-inner { padding: 16px 24px; }
+    nav { display: none; }
+    .hamburger { display: flex; }
+    .hero { padding: 100px 24px 60px; }
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero-card { display: none; }
+    .hero-stats { gap: 28px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
+    .why-visual { display: none; }
+    .steps-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">🌿</div>
+      <div class="logo-text">
+        <strong>Goenner Lawn Care</strong>
+        <span>Professional Lawn &amp; Landscaping</span>
+      </div>
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact" class="nav-cta">Get a Free Quote</a>
+    </nav>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">⭐ Trusted Local Lawn Care Professionals</div>
+      <h1>A <em>Beautiful Lawn</em> Starts Here</h1>
+      <p>From routine mowing to full-scale landscaping, Goenner Lawn Care delivers results that make your property stand out — season after season.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Get a Free Quote</a>
+        <a href="#services" class="btn-secondary">View Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">500+</div>
+          <div class="stat-label">Happy Customers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">15+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Satisfaction Guaranteed</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>What We Offer</h3>
+      <ul class="service-list">
+        <li>Lawn Mowing &amp; Edging</li>
+        <li>Fertilization &amp; Weed Control</li>
+        <li>Aeration &amp; Overseeding</li>
+        <li>Landscaping &amp; Mulching</li>
+        <li>Spring &amp; Fall Cleanup</li>
+        <li>Snow Removal</li>
+      </ul>
+      <div class="hero-cta-card">
+        <div class="phone-icon">📞</div>
+        <div>
+          <p>Call us anytime</p>
+          <a href="tel:+15555550100">(555) 555-0100</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="text-center">
+      <span class="section-label">Our Services</span>
+      <h2 class="section-title">Everything Your Lawn Needs</h2>
+      <p class="section-sub">We offer a full range of lawn and landscaping services for residential and commercial properties.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🌱</div>
+        <h3>Lawn Mowing &amp; Edging</h3>
+        <p>Consistent, precise cuts that keep your grass healthy and your property looking sharp all season long.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💧</div>
+        <h3>Fertilization &amp; Weed Control</h3>
+        <p>Custom fertilization programs and targeted weed control to promote thick, green, weed-free turf.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🌾</div>
+        <h3>Aeration &amp; Overseeding</h3>
+        <p>Core aeration and overseeding to reduce compaction, improve drainage, and fill in thin or bare spots.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🌳</div>
+        <h3>Landscaping &amp; Mulching</h3>
+        <p>Bed design, mulch installation, edging, and planting to enhance curb appeal and define your outdoor spaces.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🍂</div>
+        <h3>Spring &amp; Fall Cleanup</h3>
+        <p>Thorough seasonal cleanups including leaf removal, debris clearing, and prep work to set your lawn up for success.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">❄️</div>
+        <h3>Snow Removal</h3>
+        <p>Reliable snow plowing and salting services to keep your driveways, walks, and parking areas safe all winter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="about">
+  <div class="section-inner">
+    <div class="why-grid">
+      <div>
+        <span class="section-label">Why Choose Us</span>
+        <h2 class="section-title">Lawn Care Done Right, Every Time</h2>
+        <p style="color:var(--text-mid);margin-bottom:8px;">We're not a franchise — we're your neighbors. Goenner Lawn Care has been caring for local lawns for over 15 years, and we treat every property like our own.</p>
+        <div class="why-features">
+          <div class="why-feature">
+            <div class="why-feature-icon">📅</div>
+            <div>
+              <h4>Reliable &amp; On Schedule</h4>
+              <p>We show up when we say we will, every time — no excuses, no surprises.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">🏡</div>
+            <div>
+              <h4>Locally Owned &amp; Operated</h4>
+              <p>We're part of this community. Your satisfaction directly reflects our reputation.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">🔒</div>
+            <div>
+              <h4>Fully Insured</h4>
+              <p>Complete liability coverage so you have total peace of mind on every visit.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">💬</div>
+            <div>
+              <h4>Clear Communication</h4>
+              <p>Easy scheduling, upfront pricing, and a team that actually picks up the phone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Goenner has been taking care of our lawn for three years. It has never looked better. They're prompt, professional, and actually care about quality."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <div class="author-name">Mike R.</div>
+              <div class="author-loc">Local Homeowner</div>
+            </div>
+          </div>
+        </div>
+        <div class="guarantee-badge">
+          <span>🛡️</span>
+          <div>
+            <strong>Satisfaction Guaranteed</strong>
+            <p>Not happy? We'll come back and make it right — no questions asked.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="section-inner">
+    <div class="text-center">
+      <span class="section-label">How It Works</span>
+      <h2 class="section-title">Getting Started Is Easy</h2>
+      <p class="section-sub">Four simple steps to a lawn you'll love.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Request a Quote</h4>
+        <p>Fill out our quick form or give us a call. We'll get back to you fast.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Free Estimate</h4>
+        <p>We visit your property and provide a detailed, no-obligation quote.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>We Get to Work</h4>
+        <p>Our crew arrives on time, fully equipped, and ready to deliver results.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Enjoy Your Lawn</h4>
+        <p>Kick back and enjoy a beautiful, healthy lawn — we handle the rest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="section-inner">
+    <div class="text-center">
+      <span class="section-label">Customer Reviews</span>
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-sub">Don't just take our word for it — here's what our neighbors have to say.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Best lawn care company I've used. They transformed our yard from patchy and overgrown to something we're actually proud of. Highly recommend!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JS</div>
+          <div>
+            <div class="author-name">Jennifer S.</div>
+            <div class="author-loc">Residential Customer</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Reliable, affordable, and the results speak for themselves. I've tried several other companies over the years — Goenner is the one I'm sticking with."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">DT</div>
+          <div>
+            <div class="author-name">Dave T.</div>
+            <div class="author-loc">Residential Customer</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"We use Goenner for our commercial property. Professional crew, consistent quality, and they communicate well. Exactly what a business needs."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">KL</div>
+          <div>
+            <div class="author-name">Karen L.</div>
+            <div class="author-loc">Commercial Customer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div>
+        <span class="section-label">Contact Us</span>
+        <h2 class="section-title" style="color:white;">Ready for a Better Lawn?</h2>
+        <p style="color:rgba(255,255,255,0.7);margin-top:12px;">Get your free, no-obligation quote today. We serve residential and commercial customers throughout the area.</p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <strong>Phone</strong>
+              <span><a href="tel:+15555550100" style="color:rgba(255,255,255,0.7)">(555) 555-0100</a></span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <strong>Email</strong>
+              <span><a href="mailto:info@goennerlawncare.com" style="color:rgba(255,255,255,0.7)">info@goennerlawncare.com</a></span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <strong>Hours</strong>
+              <span>Mon–Fri: 7am–6pm &nbsp;|&nbsp; Sat: 8am–4pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Get a Free Quote</h3>
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="John">
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Smith">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="(555) 555-0100">
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="john@email.com">
+          </div>
+          <div class="form-group">
+            <label>Service Needed</label>
+            <select>
+              <option value="">Select a service...</option>
+              <option>Lawn Mowing &amp; Edging</option>
+              <option>Fertilization &amp; Weed Control</option>
+              <option>Aeration &amp; Overseeding</option>
+              <option>Landscaping &amp; Mulching</option>
+              <option>Spring / Fall Cleanup</option>
+              <option>Snow Removal</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message (optional)</label>
+            <textarea placeholder="Tell us about your property or any specific needs..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send My Free Quote Request →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <strong>Goenner Lawn Care</strong>
+      <span>© 2025 All rights reserved.</span>
+    </div>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

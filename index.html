@@ -307,7 +307,19 @@
   @media (max-width: 900px) {
     section { padding: 72px 24px; }
     .header-inner { padding: 16px 24px; }
-    nav { display: none; }
+    nav {
+      display: flex; flex-direction: column; align-items: flex-start; gap: 0;
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: white; border-bottom: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 24px;
+    }
+    nav.open { max-height: 500px; padding: 16px 24px 24px; }
+    nav a { padding: 12px 0; font-size: 1rem; border-bottom: 1px solid var(--border); width: 100%; }
+    nav a:last-child { border-bottom: none; }
+    .nav-social { padding: 12px 0 !important; }
     .hamburger { display: flex; }
     .hero { padding: 100px 24px 60px; }
     .hero-inner { grid-template-columns: 1fr; gap: 40px; }

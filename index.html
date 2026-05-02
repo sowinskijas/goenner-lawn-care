@@ -270,6 +270,8 @@
   .contact-item strong { display: block; color: var(--white); font-size: 0.85rem; margin-bottom: 2px; }
   .contact-item span, .contact-item a { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
   .contact-item a:hover { color: var(--white); }
+  .contact-cards-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; text-align: left; }
+  @media (max-width: 600px) { .contact-cards-grid { grid-template-columns: 1fr; } }
   .contact-form { background: var(--white); border-radius: 20px; padding: 40px; }
   .contact-form h3 { font-size: 1.4rem; margin-bottom: 28px; }
   .form-group { margin-bottom: 18px; }

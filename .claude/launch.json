@@ -4,7 +4,7 @@
     {
       "name": "goenner",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "3456"],
+      "runtimeArgs": ["-m", "http.server", "3456", "--directory", "/Users/jakesmac/Downloads/web/goenner"],
       "port": 3456
     }
   ]
